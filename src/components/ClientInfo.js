@@ -1,13 +1,19 @@
 
-function ClientInfo({ taxState, setTaxState, gstRate, setGstRate }) {
+function ClientInfo({
+  client,
+  taxState,
+  setTaxState,
+  gstRate,
+  setGstRate,
+}) {
   return (
     <div className="client-tax-row">
       <section className="client-section">
         <h3>Bill To</h3>
-        <p><strong>Kunal pal</strong></p>
-        <p>kunalkp26.12@gmail.com</p>
-        <p>+91 7888220925</p>
-        <p>nashik, Maharashtra, India</p>
+        <p><strong>{client.name}</strong></p>
+        <p>{client.email}</p>
+        <p>{client.phone}</p>
+        <p>{client.address}</p>
       </section>
 
       <div className="tax-settings">
